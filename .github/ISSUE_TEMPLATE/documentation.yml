@@ -1,0 +1,120 @@
+name: 📚 Documentation Issue
+description: Report an issue or suggest improvements for documentation
+title: "[Docs]: "
+labels: ["documentation", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation!
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following
+      options:
+        - label: I have searched for similar documentation issues
+          required: true
+        - label: I have checked the latest documentation
+          required: true
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation needs attention?
+      options:
+        - Tutorial
+        - How-To Guide
+        - Reference
+        - Explanation
+        - API Documentation
+        - README
+        - Contributing Guidelines
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What kind of documentation issue is this?
+      options:
+        - Incorrect information
+        - Missing information
+        - Unclear/confusing
+        - Outdated content
+        - Broken links
+        - Code examples don't work
+        - Formatting issues
+        - Typo/grammar
+        - New documentation needed
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Documentation Location
+      description: URL or file path to the documentation
+      placeholder: https://... or docs/src/content/docs/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Clearly describe the documentation issue
+      placeholder: What's wrong or missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: Quote the current content that needs to be changed
+      placeholder: |
+        ```
+        Current documentation text...
+        ```
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested Fix
+      description: How should this be corrected or improved?
+      placeholder: |
+        Suggested documentation text...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: Additional context...
+
+  - type: checkboxes
+    id: diataxis
+    attributes:
+      label: Diataxis Alignment
+      description: If creating new docs, which Diataxis category?
+      options:
+        - label: Tutorial (learning-oriented)
+        - label: How-To Guide (task-oriented)
+        - label: Reference (information-oriented)
+        - label: Explanation (understanding-oriented)
+
+  - type: checkboxes
+    id: willing-to-fix
+    attributes:
+      label: Contribution
+      options:
+        - label: I am willing to submit a PR to fix this documentation issue
