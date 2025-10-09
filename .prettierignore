@@ -1,0 +1,37 @@
+# Ignore files for Prettier
+node_modules/
+dist/
+build/
+coverage/
+.next/
+.nuxt/
+.cache/
+.turbo/
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+*.tsbuildinfo
+
+# Documentation build
+docs/dist/
+docs/.astro/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local

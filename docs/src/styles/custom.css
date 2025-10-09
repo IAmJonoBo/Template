@@ -1,0 +1,68 @@
+/* Custom styles for Starlight documentation */
+
+:root {
+  --sl-color-accent: #3b82f6;
+  --sl-color-accent-high: #2563eb;
+}
+
+/* Custom heading styles */
+.sl-markdown-content h1 {
+  border-bottom: 2px solid var(--sl-color-accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom link styles */
+.sl-markdown-content a {
+  text-decoration: underline;
+  text-decoration-color: var(--sl-color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+/* Code block improvements */
+.sl-markdown-content pre {
+  border-radius: 8px;
+}
+
+/* Callout styling improvements */
+.sl-markdown-content aside {
+  border-radius: 8px;
+}
+
+/* Table improvements */
+.sl-markdown-content table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Badge styles */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.badge-error {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .sl-markdown-content h1 {
+    font-size: 1.75rem;
+  }
+}
