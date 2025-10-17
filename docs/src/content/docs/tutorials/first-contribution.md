@@ -216,7 +216,7 @@ Includes comprehensive tests covering edge cases."
 
 **Commit Message Format**:
 
-```
+```text
 <type>: <subject>
 
 <body>
@@ -241,7 +241,7 @@ npx changeset add
 
 Follow the prompts:
 
-```
+```text
 🦋  What kind of change is this for template?
 ◯ major (breaking change)
 ◉ minor (new feature)
