@@ -75,7 +75,7 @@ Visit `http://localhost:4321` to browse the documentation.
 
 ## 🏗️ Repository Structure
 
-```
+```text
 .
 ├── .github/
 │   ├── ISSUE_TEMPLATE/     # Issue templates for bugs, features, docs
@@ -202,4 +202,4 @@ for details.
 
 ---
 
-**Made with ❤️ by the Template community**
+--Made with ❤️ by the Template community--
