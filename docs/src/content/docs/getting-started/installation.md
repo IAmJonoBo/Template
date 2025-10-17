@@ -5,7 +5,8 @@ description: Detailed installation and setup guide
 
 # Installation Guide
 
-This comprehensive guide covers the installation and setup of the Template repository in various scenarios.
+This comprehensive guide covers the installation and setup of the Template
+repository in various scenarios.
 
 ## System Requirements
 
@@ -38,6 +39,7 @@ The easiest way to start with Template:
    - Select "Create a new repository"
 
 3. **Configure your repository**
+
    ```
    Repository name: my-awesome-project
    Description: My project based on Template
@@ -48,12 +50,14 @@ The easiest way to start with Template:
    - Click "Create repository from template"
 
 5. **Clone your new repository**
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/my-awesome-project.git
    cd my-awesome-project
    ```
 
 6. **Install dependencies**
+
    ```bash
    npm install
    ```
@@ -72,17 +76,20 @@ For contributing back to Template:
    - Click "Fork" button
 
 2. **Clone your fork**
+
    ```bash
    git clone https://github.com/YOUR-USERNAME/Template.git
    cd Template
    ```
 
 3. **Add upstream remote**
+
    ```bash
    git remote add upstream https://github.com/IAmJonoBo/Template.git
    ```
 
 4. **Install dependencies**
+
    ```bash
    npm install
    ```
@@ -97,12 +104,14 @@ For contributing back to Template:
 For quick testing or local use:
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/IAmJonoBo/Template.git
    cd Template
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
@@ -121,12 +130,14 @@ For offline use or exploration:
    - Click "Code" → "Download ZIP"
 
 2. **Extract the archive**
+
    ```bash
    unzip Template-main.zip
    cd Template-main
    ```
 
 3. **Initialize Git (optional)**
+
    ```bash
    git init
    git add .
@@ -236,6 +247,7 @@ npm run verify
 ```
 
 This script will:
+
 1. ✓ Check Node.js version
 2. ✓ Run linter
 3. ✓ Run type checker
@@ -243,6 +255,7 @@ This script will:
 5. ✓ Build the project
 
 Expected output:
+
 ```
 ✓ Linting passed
 ✓ Type checking passed
@@ -267,6 +280,7 @@ nano .env
 ```
 
 Example `.env` file:
+
 ```env
 # Application
 NODE_ENV=development
@@ -293,8 +307,9 @@ FEATURE_NEW_UI=false
    - GitLens
 
 2. **Configure settings**
-   
+
    Create `.vscode/settings.json`:
+
    ```json
    {
      "editor.formatOnSave": true,
@@ -307,8 +322,9 @@ FEATURE_NEW_UI=false
    ```
 
 3. **Configure launch configurations**
-   
+
    Create `.vscode/launch.json`:
+
    ```json
    {
      "version": "0.2.0",
@@ -332,7 +348,8 @@ FEATURE_NEW_UI=false
    - Set Node interpreter to your Node.js installation
 
 2. **Enable ESLint**
-   - Settings → Languages & Frameworks → JavaScript → Code Quality Tools → ESLint
+   - Settings → Languages & Frameworks → JavaScript → Code Quality Tools →
+     ESLint
    - Select "Automatic ESLint configuration"
 
 3. **Enable Prettier**
@@ -349,6 +366,7 @@ npm run setup:hooks
 ```
 
 This sets up:
+
 - Pre-commit: Runs linter and formatter
 - Pre-push: Runs tests
 
@@ -431,12 +449,14 @@ npm test
 #### Windows
 
 **Issue**: Line ending conflicts
+
 ```bash
 # Solution: Configure Git line endings
 git config --global core.autocrlf true
 ```
 
 **Issue**: Long path errors
+
 ```bash
 # Solution: Enable long paths
 git config --system core.longpaths true
@@ -445,6 +465,7 @@ git config --system core.longpaths true
 #### macOS
 
 **Issue**: Xcode Command Line Tools missing
+
 ```bash
 # Solution: Install Xcode tools
 xcode-select --install
@@ -453,6 +474,7 @@ xcode-select --install
 #### Linux
 
 **Issue**: Missing build tools
+
 ```bash
 # Solution: Install build essentials
 sudo apt-get install build-essential
@@ -463,6 +485,7 @@ sudo apt-get install build-essential
 If you prefer Docker:
 
 1. **Create Dockerfile**
+
    ```dockerfile
    FROM node:20.11.0-alpine
    WORKDIR /app
@@ -474,13 +497,14 @@ If you prefer Docker:
    ```
 
 2. **Create docker-compose.yml**
+
    ```yaml
    version: '3.8'
    services:
      app:
        build: .
        ports:
-         - "3000:3000"
+         - '3000:3000'
        volumes:
          - .:/app
          - /app/node_modules
@@ -501,16 +525,19 @@ After successful installation:
    - Adjust configurations as needed
 
 2. **Start development**
+
    ```bash
    npm run dev
    ```
 
 3. **Read the documentation**
+
    ```bash
    cd docs
    npm install
    npm run dev
    ```
+
    Visit http://localhost:4321
 
 4. **Explore tutorials**
@@ -522,8 +549,10 @@ After successful installation:
 If you encounter issues:
 
 - 📚 Check the [Troubleshooting](#troubleshooting) section above
-- 💬 Ask in [GitHub Discussions](https://github.com/IAmJonoBo/Template/discussions)
-- 🐛 Report bugs via [GitHub Issues](https://github.com/IAmJonoBo/Template/issues)
+- 💬 Ask in
+  [GitHub Discussions](https://github.com/IAmJonoBo/Template/discussions)
+- 🐛 Report bugs via
+  [GitHub Issues](https://github.com/IAmJonoBo/Template/issues)
 - 📖 Review the [Contributing Guide](../../contributing/how-to-contribute/)
 
 ---

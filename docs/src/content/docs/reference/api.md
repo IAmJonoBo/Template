@@ -14,11 +14,13 @@ This document provides a complete API reference for the Template repository.
 Returns a formatted greeting message.
 
 **Parameters:**
+
 - `message` (string): The message to include in the greeting
 
 **Returns:** (string) The formatted greeting
 
 **Example:**
+
 ```typescript
 import { hello } from 'template-repository';
 
@@ -27,6 +29,7 @@ console.log(greeting); // "Hello, World!"
 ```
 
 **Edge Cases:**
+
 - Empty string: Returns "Hello, !"
 - Special characters: Preserved in output
 
@@ -39,6 +42,7 @@ The current version of the template.
 **Type:** `string`
 
 **Example:**
+
 ```typescript
 import { version } from 'template-repository';
 
@@ -58,10 +62,10 @@ console.log(version); // "0.1.0"
 interface Config {
   /** Port number for the server */
   port: number;
-  
+
   /** Environment (development, production, test) */
   env: 'development' | 'production' | 'test';
-  
+
   /** Enable debug mode */
   debug?: boolean;
 }
@@ -72,16 +76,16 @@ interface Config {
 interface User {
   /** Unique user identifier */
   id: string;
-  
+
   /** User's full name */
   name: string;
-  
+
   /** User's email address */
   email: string;
-  
+
   /** User creation timestamp */
   createdAt: Date;
-  
+
   /** Last update timestamp */
   updatedAt: Date;
 }
@@ -92,13 +96,13 @@ interface User {
 interface ApiResponse<T> {
   /** Response data */
   data: T;
-  
+
   /** HTTP status code */
   status: number;
-  
+
   /** Success indicator */
   success: boolean;
-  
+
   /** Error message (if any) */
   error?: string;
 }
@@ -113,11 +117,13 @@ interface ApiResponse<T> {
 Thrown when input validation fails.
 
 **Properties:**
+
 - `name`: "ValidationError"
 - `message`: Error description
 - `field`: (optional) The field that failed validation
 
 **Example:**
+
 ```typescript
 try {
   validateEmail('invalid-email');
@@ -136,12 +142,14 @@ try {
 Thrown when a resource is not found.
 
 **Properties:**
+
 - `name`: "NotFoundError"
 - `message`: Error description
 - `resource`: The type of resource
 - `id`: The identifier that wasn't found
 
 **Example:**
+
 ```typescript
 try {
   const user = await getUser('invalid-id');
@@ -274,15 +282,17 @@ await delay(1000); // Wait 1 second
 Retries a function until it succeeds or max attempts reached.
 
 **Options:**
+
 - `maxAttempts` (number): Maximum retry attempts (default: 3)
 - `delayMs` (number): Delay between retries in ms (default: 1000)
 - `exponentialBackoff` (boolean): Use exponential backoff (default: false)
 
 ```typescript
-const result = await retry(
-  () => fetchData(),
-  { maxAttempts: 5, delayMs: 1000, exponentialBackoff: true }
-);
+const result = await retry(() => fetchData(), {
+  maxAttempts: 5,
+  delayMs: 1000,
+  exponentialBackoff: true,
+});
 ```
 
 ### `timeout<T>(promise: Promise<T>, ms: number): Promise<T>`
@@ -341,12 +351,12 @@ const defaultConfig: Config = {
 
 ### Environment Variables
 
-| Variable | Type | Default | Description |
-|----------|------|---------|-------------|
-| `NODE_ENV` | string | `development` | Application environment |
-| `PORT` | number | `3000` | Server port |
-| `LOG_LEVEL` | string | `info` | Logging level |
-| `DEBUG` | boolean | `false` | Enable debug mode |
+| Variable    | Type    | Default       | Description             |
+| ----------- | ------- | ------------- | ----------------------- |
+| `NODE_ENV`  | string  | `development` | Application environment |
+| `PORT`      | number  | `3000`        | Server port             |
+| `LOG_LEVEL` | string  | `info`        | Logging level           |
+| `DEBUG`     | boolean | `false`       | Enable debug mode       |
 
 ---
 
@@ -399,7 +409,7 @@ async function getUser(id: string): Promise<User> {
 
 // ❌ Bad
 function getUser(id: string): Promise<User> {
-  return userRepository.findById(id).then(user => user);
+  return userRepository.findById(id).then((user) => user);
 }
 ```
 

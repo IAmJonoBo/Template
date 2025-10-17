@@ -1,6 +1,7 @@
 # Contributing Guidelines
 
-Thank you for your interest in contributing to this project! This document provides guidelines and best practices for contributing.
+Thank you for your interest in contributing to this project! This document
+provides guidelines and best practices for contributing.
 
 ## Table of Contents
 
@@ -16,13 +17,15 @@ Thank you for your interest in contributing to this project! This document provi
 
 ## Code of Conduct
 
-This project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
+This project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md). By
+participating, you are expected to uphold this code.
 
 ## Getting Started
 
 1. Fork the repository
 2. Clone your fork: `git clone https://github.com/YOUR-USERNAME/Template.git`
-3. Add upstream remote: `git remote add upstream https://github.com/IAmJonoBo/Template.git`
+3. Add upstream remote:
+   `git remote add upstream https://github.com/IAmJonoBo/Template.git`
 4. Create a branch: `git checkout -b feature/your-feature-name`
 
 ## Development Setup
@@ -50,7 +53,8 @@ npm run verify
 
 ### Reporting Bugs
 
-1. Check if the bug has already been reported in [Issues](https://github.com/IAmJonoBo/Template/issues)
+1. Check if the bug has already been reported in
+   [Issues](https://github.com/IAmJonoBo/Template/issues)
 2. If not, create a new issue using the Bug Report template
 3. Provide detailed information:
    - Clear description of the bug
@@ -62,7 +66,8 @@ npm run verify
 
 ### Suggesting Features
 
-1. Check [Discussions](https://github.com/IAmJonoBo/Template/discussions) for similar suggestions
+1. Check [Discussions](https://github.com/IAmJonoBo/Template/discussions) for
+   similar suggestions
 2. Create a new issue using the Feature Request template
 3. Provide:
    - Clear description of the feature
@@ -133,7 +138,8 @@ Documentation contributions are highly valued:
 
 ## Commit Message Guidelines
 
-We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+We follow the [Conventional Commits](https://www.conventionalcommits.org/)
+specification:
 
 ### Format
 
@@ -247,22 +253,23 @@ describe('UserService', () => {
   it('should create a new user with valid data', async () => {
     // Arrange
     const userData = { name: 'John', email: 'john@example.com' };
-    
+
     // Act
     const user = await userService.create(userData);
-    
+
     // Assert
     expect(user).toBeDefined();
     expect(user.name).toBe('John');
   });
-  
+
   it('should throw error with invalid email', async () => {
     // Arrange
     const userData = { name: 'John', email: 'invalid-email' };
-    
+
     // Act & Assert
-    await expect(userService.create(userData))
-      .rejects.toThrow('Invalid email format');
+    await expect(userService.create(userData)).rejects.toThrow(
+      'Invalid email format'
+    );
   });
 });
 ```
@@ -326,4 +333,5 @@ If you have questions:
 
 ## Thank You!
 
-Your contributions make this project better. Thank you for being part of our community! 🎉
+Your contributions make this project better. Thank you for being part of our
+community! 🎉

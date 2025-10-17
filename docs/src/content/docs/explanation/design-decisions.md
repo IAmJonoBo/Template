@@ -12,6 +12,7 @@ This document explains key design decisions made in the Template repository.
 **Decision**: Use Astro Starlight for documentation
 
 **Rationale**:
+
 - Purpose-built for documentation
 - Excellent performance
 - Modern developer experience
@@ -24,12 +25,14 @@ See [ADR-0001](../reference/adr/0001-astro-starlight/) for full details.
 **Decision**: Follow Diataxis methodology
 
 **Rationale**:
+
 - Proven documentation structure
 - User-centric approach
 - Clear content organization
 - Better learning experience
 
 **Structure**:
+
 - **Tutorials**: Learning-oriented, step-by-step
 - **How-To Guides**: Problem-solving, task-oriented
 - **Reference**: Information, technical specs
@@ -40,6 +43,7 @@ See [ADR-0001](../reference/adr/0001-astro-starlight/) for full details.
 **Decision**: Use Semantic Versioning with Changesets
 
 **Rationale**:
+
 - Clear version meaning
 - Automated changelog
 - Simple contributor workflow
@@ -54,6 +58,7 @@ See [Versioning Strategy](./versioning/) for details.
 **Decision**: Use TypeScript with strict mode
 
 **Rationale**:
+
 - Type safety catches errors early
 - Better IDE support
 - Improved maintainability
@@ -64,6 +69,7 @@ See [Versioning Strategy](./versioning/) for details.
 **Decision**: Use both ESLint and Prettier
 
 **Rationale**:
+
 - ESLint: Code quality and bugs
 - Prettier: Code formatting
 - Complementary tools
@@ -74,6 +80,7 @@ See [Versioning Strategy](./versioning/) for details.
 **Decision**: Use Jest for testing
 
 **Rationale**:
+
 - Comprehensive testing framework
 - Great TypeScript support
 - Built-in coverage reporting
@@ -86,6 +93,7 @@ See [Versioning Strategy](./versioning/) for details.
 **Decision**: Start with monolithic structure
 
 **Rationale**:
+
 - Simpler for templates
 - Lower complexity
 - Easier to understand
@@ -96,6 +104,7 @@ See [Versioning Strategy](./versioning/) for details.
 **Decision**: Feature-based organization
 
 **Rationale**:
+
 ```
 src/
   features/    # Feature modules
@@ -115,6 +124,7 @@ src/
 **Decision**: Use GitHub Actions for CI/CD
 
 **Rationale**:
+
 - Native GitHub integration
 - Free for public repos
 - Powerful and flexible
@@ -125,6 +135,7 @@ src/
 **Decision**: Enforce quality checks in CI
 
 **Rationale**:
+
 - Linting (ESLint)
 - Type checking (TypeScript)
 - Testing (Jest)
@@ -139,6 +150,7 @@ Ensures quality before merge.
 **Decision**: Use Dependabot for dependency updates
 
 **Rationale**:
+
 - Automated updates
 - Security patches
 - Configurable schedule
@@ -149,6 +161,7 @@ Ensures quality before merge.
 **Decision**: Weekly dependency updates, daily security
 
 **Rationale**:
+
 - Balance between fresh and stable
 - Security updates immediately
 - Manageable PR volume
@@ -161,6 +174,7 @@ Ensures quality before merge.
 **Decision**: Feature branch workflow
 
 **Rationale**:
+
 ```
 main                    # Production-ready
   ├── feature/x        # New features
@@ -178,6 +192,7 @@ main                    # Production-ready
 **Decision**: Conventional Commits
 
 **Rationale**:
+
 - Automated changelogs
 - Clear commit history
 - Enables semantic versioning
@@ -198,6 +213,7 @@ Unit Tests      (Many)
 ```
 
 **Rationale**:
+
 - Unit tests are fast and cheap
 - Integration tests for key paths
 - E2E tests for critical flows
@@ -214,6 +230,7 @@ src/
 ```
 
 **Rationale**:
+
 - Easy to find related tests
 - Encourages testing
 - Clear relationship
@@ -226,6 +243,7 @@ src/
 **Decision**: Use .env files (not committed)
 
 **Rationale**:
+
 - Keeps secrets out of code
 - Easy to configure
 - Environment-specific
@@ -236,6 +254,7 @@ src/
 **Decision**: Use npm audit + Snyk
 
 **Rationale**:
+
 - npm audit: Built-in, quick
 - Snyk: Comprehensive, automated fixes
 - Layered security
@@ -248,6 +267,7 @@ src/
 **Decision**: Use SSG for documentation
 
 **Rationale**:
+
 - Fast page loads
 - Great SEO
 - No server needed
@@ -258,6 +278,7 @@ src/
 **Decision**: Monitor and optimize bundle size
 
 **Rationale**:
+
 - Better performance
 - Faster load times
 - Better user experience
@@ -270,6 +291,7 @@ src/
 **Decision**: Use EditorConfig
 
 **Rationale**:
+
 - Consistent across editors
 - Automatic configuration
 - No manual setup
@@ -280,6 +302,7 @@ src/
 **Decision**: Use Husky for git hooks
 
 **Rationale**:
+
 - Enforce quality before commit
 - Catch issues early
 - Automated checks
@@ -290,6 +313,7 @@ src/
 **Decision**: Run linting and formatting
 
 **Rationale**:
+
 - Catch style issues early
 - Consistent code style
 - Prevents CI failures
@@ -302,6 +326,7 @@ src/
 **Decision**: Favor convention over configuration
 
 **Trade-offs**:
+
 - ✅ Easier to get started
 - ✅ Consistent across projects
 - ❌ Less flexibility
@@ -314,6 +339,7 @@ src/
 **Decision**: Provide comprehensive features
 
 **Trade-offs**:
+
 - ✅ More features out of the box
 - ✅ Less setup needed
 - ❌ More complex
@@ -326,6 +352,7 @@ src/
 **Decision**: Be opinionated with escape hatches
 
 **Trade-offs**:
+
 - ✅ Clear best practices
 - ✅ Easier decisions
 - ❌ May not fit all preferences
@@ -363,6 +390,7 @@ src/
 ## Review Process
 
 These design decisions should be:
+
 - Reviewed quarterly
 - Updated as needs change
 - Discussed with community

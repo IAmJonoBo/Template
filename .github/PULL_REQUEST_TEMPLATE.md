@@ -8,7 +8,8 @@
 
 - [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
 - [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] 💥 Breaking change (fix or feature that would cause existing functionality
+      to not work as expected)
 - [ ] 📝 Documentation update
 - [ ] 🎨 Style/UI update (no functional changes)
 - [ ] ♻️ Code refactoring (no functional changes)
@@ -21,16 +22,15 @@
 
 <!-- Link related issues using #issue-number or "Fixes #issue-number" -->
 
-Fixes #
-Related to #
+Fixes # Related to #
 
 ## Changes Made
 
 <!-- List the specific changes made in this PR -->
 
-- 
-- 
-- 
+-
+-
+-
 
 ## Testing
 
@@ -53,8 +53,8 @@ Related to #
 
 <!-- If applicable, add screenshots or recordings to demonstrate the changes -->
 
-| Before | After |
-|--------|-------|
+| Before              | After               |
+| ------------------- | ------------------- |
 | <!-- screenshot --> | <!-- screenshot --> |
 
 ## Checklist

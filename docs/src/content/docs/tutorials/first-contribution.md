@@ -5,7 +5,8 @@ description: A step-by-step tutorial for making your first contribution
 
 # Tutorial: Your First Contribution
 
-Welcome! This tutorial will guide you through making your first contribution to the Template repository.
+Welcome! This tutorial will guide you through making your first contribution to
+the Template repository.
 
 **Time Required**: 30-45 minutes  
 **Difficulty**: Beginner  
@@ -14,6 +15,7 @@ Welcome! This tutorial will guide you through making your first contribution to 
 ## What You'll Learn
 
 By the end of this tutorial, you will:
+
 - ✅ Set up your development environment
 - ✅ Make a code change
 - ✅ Write a test
@@ -25,7 +27,8 @@ By the end of this tutorial, you will:
 
 ### Fork the Repository
 
-1. Go to https://github.com/IAmJonoBo/Template
+1. Go to
+   [https://github.com/IAmJonoBo/Template](https://github.com/IAmJonoBo/Template)
 2. Click the **"Fork"** button in the top right
 3. Wait for GitHub to create your fork
 
@@ -95,13 +98,15 @@ git checkout -b feature/add-goodbye-function
 ```
 
 **Branch Naming Tip**: Use descriptive names like:
+
 - `feature/add-user-authentication`
 - `fix/null-pointer-error`
 - `docs/improve-readme`
 
 ## Step 4: Make Your Change
 
-Let's add a simple function. We'll add a `goodbye` function to complement the existing `hello` function.
+Let's add a simple function. We'll add a `goodbye` function to complement the
+existing `hello` function.
 
 ### Edit the Source File
 
@@ -110,7 +115,7 @@ Open `src/index.ts` and add:
 ```typescript
 /**
  * Says goodbye to someone
- * 
+ *
  * @param message - The name of the person
  * @returns The formatted goodbye message
  */
@@ -130,7 +135,7 @@ export { version } from './version';
 
 /**
  * Example function to demonstrate the template structure
- * 
+ *
  * @param message - The message to display
  * @returns The formatted message
  */
@@ -140,7 +145,7 @@ export function hello(message: string): string {
 
 /**
  * Says goodbye to someone
- * 
+ *
  * @param message - The name of the person
  * @returns The formatted goodbye message
  */
@@ -210,6 +215,7 @@ Includes comprehensive tests covering edge cases."
 ```
 
 **Commit Message Format**:
+
 ```
 <type>: <subject>
 
@@ -217,6 +223,7 @@ Includes comprehensive tests covering edge cases."
 ```
 
 **Common Types**:
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation
@@ -264,24 +271,30 @@ git push origin feature/add-goodbye-function
 **Title**: `feat: add goodbye function`
 
 **Description**:
+
 ```markdown
 ## Description
-Adds a new `goodbye` function that provides a friendly farewell message, 
+
+Adds a new `goodbye` function that provides a friendly farewell message,
 complementing the existing `hello` function.
 
 ## Type of Change
+
 - [x] ✨ New feature (non-breaking change which adds functionality)
 
 ## Changes Made
+
 - Added `goodbye(message: string): string` function to src/index.ts
 - Added comprehensive tests covering normal and edge cases
 - Updated exports in index.ts
 
 ## Testing
+
 - [x] Unit tests added/updated
 - [x] All tests pass locally
 
 ## Checklist
+
 - [x] My code follows the project's style guidelines
 - [x] I have added tests that prove my feature works
 - [x] I have added a changeset
@@ -434,7 +447,8 @@ Congratulations on your first contribution! 🎉
 
 Stuck? Don't worry!
 
-- 💬 Ask in [GitHub Discussions](https://github.com/IAmJonoBo/Template/discussions)
+- 💬 Ask in
+  [GitHub Discussions](https://github.com/IAmJonoBo/Template/discussions)
 - 📖 Read the [Contributing Guide](../../contributing/how-to-contribute/)
 - 🐛 Check [existing issues](https://github.com/IAmJonoBo/Template/issues)
 

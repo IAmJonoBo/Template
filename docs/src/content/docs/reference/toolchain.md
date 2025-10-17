@@ -5,13 +5,15 @@ description: Development tools and utilities reference
 
 # Toolchain
 
-This document describes the development tools and utilities used in the Template repository.
+This document describes the development tools and utilities used in the Template
+repository.
 
 ## Editor & IDE
 
 ### VS Code (Recommended)
 
 **Extensions**:
+
 - **ESLint**: Linting integration
 - **Prettier**: Code formatting
 - **EditorConfig**: Editor configuration
@@ -45,6 +47,7 @@ This document describes the development tools and utilities used in the Template
 ### Package Manager
 
 #### npm
+
 ```bash
 # Install dependencies
 npm install
@@ -63,6 +66,7 @@ npm audit
 ```
 
 #### Alternative: yarn
+
 ```bash
 yarn install
 yarn add package-name
@@ -70,6 +74,7 @@ yarn add -D package-name
 ```
 
 #### Alternative: pnpm
+
 ```bash
 pnpm install
 pnpm add package-name
@@ -79,6 +84,7 @@ pnpm add -D package-name
 ### Version Manager
 
 #### nvm (Node Version Manager)
+
 ```bash
 # Install Node version from .nvmrc
 nvm install
@@ -95,6 +101,7 @@ nvm alias default 20.11.0
 ### Linting
 
 #### ESLint
+
 ```bash
 # Lint all files
 npm run lint
@@ -111,6 +118,7 @@ npx eslint src/**/*.ts
 ### Formatting
 
 #### Prettier
+
 ```bash
 # Check formatting
 npm run format:check
@@ -127,6 +135,7 @@ npx prettier --write src/**/*.ts
 ### Type Checking
 
 #### TypeScript
+
 ```bash
 # Type check
 npm run typecheck
@@ -143,6 +152,7 @@ npx tsc --declaration
 ## Testing Tools
 
 ### Jest
+
 ```bash
 # Run all tests
 npm test
@@ -163,6 +173,7 @@ npm test -- -u
 **Configuration**: `jest.config.js`
 
 ### Testing Library
+
 ```bash
 # Debug tests
 npm test -- --debug
@@ -174,6 +185,7 @@ npm test -- --verbose
 ## Build Tools
 
 ### TypeScript Compiler
+
 ```bash
 # Build project
 npm run build
@@ -190,6 +202,7 @@ npm run build:watch
 Depending on your project type:
 
 #### Vite
+
 ```bash
 npm run dev
 npm run build
@@ -197,6 +210,7 @@ npm run preview
 ```
 
 #### Webpack
+
 ```bash
 npm run dev
 npm run build
@@ -208,6 +222,7 @@ npm run serve
 ### Git Hooks (Husky)
 
 **Pre-commit**: Runs linting and formatting checks
+
 ```bash
 # Install hooks
 npm run prepare
@@ -221,6 +236,7 @@ git commit --no-verify
 ### Conventional Commits
 
 #### Commitizen
+
 ```bash
 # Interactive commit
 npx cz
@@ -230,6 +246,7 @@ npm run commit
 ```
 
 #### Commitlint
+
 Validates commit messages automatically via git hook.
 
 **Configuration**: `.commitlintrc.json`
@@ -237,6 +254,7 @@ Validates commit messages automatically via git hook.
 ## Version Control
 
 ### Git
+
 ```bash
 # Check status
 git status
@@ -261,6 +279,7 @@ git log --oneline --graph
 ```
 
 ### GitHub CLI
+
 ```bash
 # Create PR
 gh pr create
@@ -281,6 +300,7 @@ gh issue create
 ## Documentation Tools
 
 ### Astro & Starlight
+
 ```bash
 # Start docs dev server
 cd docs
@@ -296,6 +316,7 @@ npm run preview
 ### Markdown Tools
 
 #### markdownlint
+
 ```bash
 # Lint markdown files
 npx markdownlint docs/**/*.md
@@ -307,6 +328,7 @@ npx markdownlint --fix docs/**/*.md
 ## Debugging Tools
 
 ### Node.js Debugger
+
 ```bash
 # Start with debugger
 node --inspect src/index.js
@@ -338,6 +360,7 @@ node --inspect-brk node_modules/.bin/jest --runInBand
 ## Performance Tools
 
 ### Profiling
+
 ```bash
 # Profile Node.js app
 node --prof src/index.js
@@ -347,6 +370,7 @@ node --prof-process isolate-*.log
 ```
 
 ### Benchmarking
+
 ```bash
 # Using autocannon (API benchmarking)
 npx autocannon http://localhost:3000
@@ -358,6 +382,7 @@ npx clinic doctor -- node src/index.js
 ## Deployment Tools
 
 ### Docker
+
 ```bash
 # Build image
 docker build -t template:latest .
@@ -372,6 +397,7 @@ docker-compose up
 ### CI/CD
 
 #### GitHub Actions
+
 - Automatically runs on push/PR
 - View in GitHub Actions tab
 - Locally with act: `npx act`
@@ -379,6 +405,7 @@ docker-compose up
 ## Automation Scripts
 
 ### Setup
+
 ```bash
 # Full project setup
 npm run setup
@@ -391,6 +418,7 @@ npm run verify
 ```
 
 ### Development
+
 ```bash
 # Start development
 npm run dev
@@ -403,6 +431,7 @@ npm run typecheck:watch
 ```
 
 ### Quality Checks
+
 ```bash
 # Run all checks
 npm run check:all
@@ -412,6 +441,7 @@ npm run prepush
 ```
 
 ### Maintenance
+
 ```bash
 # Update dependencies
 npm run update:deps
@@ -428,12 +458,14 @@ npm run clean:install
 ### File Operations
 
 #### trash-cli
+
 ```bash
 # Safely delete (to trash)
 npx trash dist/
 ```
 
 #### rimraf
+
 ```bash
 # Cross-platform rm -rf
 npx rimraf dist/
@@ -442,6 +474,7 @@ npx rimraf dist/
 ### Code Generation
 
 #### Plop
+
 ```bash
 # Generate component
 npm run generate
@@ -453,12 +486,14 @@ npx plop component
 ### Code Analysis
 
 #### Dependency Cruiser
+
 ```bash
 # Analyze dependencies
 npx depcruise --include-only "^src" src
 ```
 
 #### Bundle Analysis
+
 ```bash
 # Analyze bundle size
 npm run analyze
@@ -467,6 +502,7 @@ npm run analyze
 ## Security Tools
 
 ### Audit
+
 ```bash
 # npm audit
 npm audit
@@ -479,6 +515,7 @@ npm audit fix
 ```
 
 ### Snyk
+
 ```bash
 # Test for vulnerabilities
 npx snyk test
@@ -490,6 +527,7 @@ npx snyk monitor
 ## Monitoring Tools
 
 ### Logs
+
 ```bash
 # View logs
 npm run logs
@@ -499,6 +537,7 @@ npm run logs:follow
 ```
 
 ### Health Checks
+
 ```bash
 # Check application health
 curl http://localhost:3000/health
@@ -524,7 +563,7 @@ npm install -g json-server
 
 ## Tool Configuration Files
 
-```
+```text
 .
 ├── .eslintrc.json          # ESLint configuration
 ├── .prettierrc             # Prettier configuration

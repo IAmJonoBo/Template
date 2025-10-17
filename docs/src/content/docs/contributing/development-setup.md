@@ -1,11 +1,13 @@
 ---
 title: Set Up Your Development Environment
-description: Configure your local development environment for the Template repository
+description:
+  Configure your local development environment for the Template repository
 ---
 
 # How to Set Up Your Development Environment
 
-This guide walks you through setting up a complete development environment for working with the Template repository.
+This guide walks you through setting up a complete development environment for
+working with the Template repository.
 
 ## Prerequisites Checklist
 
@@ -39,7 +41,7 @@ nvm --version
 #### Windows
 
 Download and install nvm-windows from:
-https://github.com/coreybutler/nvm-windows/releases
+[nvm-windows releases](https://github.com/coreybutler/nvm-windows/releases)
 
 ### Install Node.js 20.11.0
 
@@ -72,8 +74,7 @@ brew install git
 
 ### Windows
 
-Download and install from:
-https://git-scm.com/download/win
+Download and install from: https://git-scm.com/download/win
 
 ### Linux
 
@@ -127,6 +128,7 @@ ext install eamodio.gitlens
 ```
 
 Or install from the Extensions marketplace:
+
 - **ESLint**: JavaScript/TypeScript linting
 - **Prettier**: Code formatting
 - **EditorConfig**: Consistent coding styles
@@ -256,6 +258,7 @@ npm run verify
 ```
 
 Expected output:
+
 ```
 ✓ Linting passed
 ✓ Type checking passed
@@ -322,6 +325,7 @@ If you plan to use Docker:
    - Linux: https://docs.docker.com/desktop/install/linux-install/
 
 2. Verify installation:
+
 ```bash
 docker --version
 docker-compose --version
@@ -456,7 +460,8 @@ Now that your environment is set up:
 
 2. **Start Contributing**
    - Find a `good first issue`
-   - Follow the [First Contribution Tutorial](../../tutorials/first-contribution/)
+   - Follow the
+     [First Contribution Tutorial](../../tutorials/first-contribution/)
 
 3. **Join the Community**
    - [GitHub Discussions](https://github.com/IAmJonoBo/Template/discussions)

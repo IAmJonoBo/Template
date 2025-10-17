@@ -172,7 +172,8 @@ Now that you're set up, explore:
 2. **[Tutorials](../../tutorials/)**: Step-by-step learning guides
 3. **[How-To Guides](../../how-to/)**: Solve specific problems
 4. **[Reference](../../reference/tech-stack/)**: Technical documentation
-5. **[Contributing](../../contributing/how-to-contribute/)**: Learn how to contribute
+5. **[Contributing](../../contributing/how-to-contribute/)**: Learn how to
+   contribute
 
 ## Troubleshooting
 
@@ -226,7 +227,8 @@ npm run build -- --verbose
 Need assistance?
 
 - 📚 Check the [documentation](/getting-started/introduction/)
-- 💬 Ask in [GitHub Discussions](https://github.com/IAmJonoBo/Template/discussions)
+- 💬 Ask in
+  [GitHub Discussions](https://github.com/IAmJonoBo/Template/discussions)
 - 🐛 Report [issues](https://github.com/IAmJonoBo/Template/issues)
 - 📖 Read the [Contributing Guide](../../contributing/how-to-contribute/)
 

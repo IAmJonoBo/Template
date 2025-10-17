@@ -5,11 +5,13 @@ description: Coding standards and conventions for the Template repository
 
 # Conventions
 
-This document outlines the coding standards and conventions used across the Template repository.
+This document outlines the coding standards and conventions used across the
+Template repository.
 
 ## General Principles
 
 ### Code Quality
+
 - **Readability**: Code should be easy to read and understand
 - **Maintainability**: Code should be easy to maintain and modify
 - **Testability**: Code should be easy to test
@@ -17,6 +19,7 @@ This document outlines the coding standards and conventions used across the Temp
 - **Consistency**: Follow established patterns
 
 ### SOLID Principles
+
 - **S**ingle Responsibility Principle
 - **O**pen/Closed Principle
 - **L**iskov Substitution Principle
@@ -163,10 +166,10 @@ function validateEmail(email: string): boolean {
 function createUser(data: CreateUserDto): Promise<User> {
   // 1. Validate input
   validateUserData(data);
-  
+
   // 2. Transform data
   const user = transformToUser(data);
-  
+
   // 3. Perform action
   return userRepository.save(user);
 }
@@ -183,28 +186,28 @@ class UserService {
   private readonly repository: UserRepository;
   private cache: Map<string, User>;
   public name: string;
-  
+
   // 2. Constructor
   constructor(repository: UserRepository) {
     this.repository = repository;
     this.cache = new Map();
     this.name = 'UserService';
   }
-  
+
   // 3. Public methods
   public async getUser(id: string): Promise<User> {
     // Implementation
   }
-  
+
   public async createUser(data: CreateUserDto): Promise<User> {
     // Implementation
   }
-  
+
   // 4. Private methods
   private validateUser(user: User): void {
     // Implementation
   }
-  
+
   private async cacheUser(user: User): Promise<void> {
     // Implementation
   }
@@ -288,16 +291,16 @@ function getUser(id: string): User | null {
 
 ### JSDoc Comments
 
-```typescript
+````typescript
 /**
  * Creates a new user in the system.
- * 
+ *
  * @param data - The user data to create
  * @param options - Optional configuration
  * @returns The created user with generated ID
  * @throws {ValidationError} If user data is invalid
  * @throws {DuplicateError} If user email already exists
- * 
+ *
  * @example
  * ```typescript
  * const user = await createUser({
@@ -312,7 +315,7 @@ async function createUser(
 ): Promise<User> {
   // Implementation
 }
-```
+````
 
 ### Inline Comments
 
@@ -339,7 +342,10 @@ counter++;
 ```typescript
 // Create custom error classes
 class ValidationError extends Error {
-  constructor(message: string, public field?: string) {
+  constructor(
+    message: string,
+    public field?: string
+  ) {
     super(message);
     this.name = 'ValidationError';
   }
@@ -363,12 +369,12 @@ try {
 } catch (error) {
   // Log with context
   logger.error('Operation failed', { error, userId });
-  
+
   // Transform to application error
   if (error instanceof DatabaseError) {
     throw new ApplicationError('Failed to access data');
   }
-  
+
   throw error;
 }
 
@@ -377,11 +383,11 @@ function processUser(user: User | null): void {
   if (!user) {
     throw new NotFoundError('User', 'unknown');
   }
-  
+
   if (!user.email) {
     throw new ValidationError('Email is required', 'email');
   }
-  
+
   // Happy path
   processValidUser(user);
 }
@@ -399,16 +405,12 @@ async function getUsers(): Promise<User[]> {
 
 // ❌ Avoid
 function getUsers(): Promise<User[]> {
-  return userRepository.findAll()
-    .then(users => users);
+  return userRepository.findAll().then((users) => users);
 }
 
 // Handle multiple async operations
 // Parallel execution
-const [users, posts] = await Promise.all([
-  getUsers(),
-  getPosts(),
-]);
+const [users, posts] = await Promise.all([getUsers(), getPosts()]);
 
 // Sequential execution
 const user = await getUser(id);
@@ -435,33 +437,34 @@ describe('UserService', () => {
   // Setup
   let service: UserService;
   let repository: MockRepository;
-  
+
   beforeEach(() => {
     repository = createMockRepository();
     service = new UserService(repository);
   });
-  
+
   // Group related tests
   describe('createUser', () => {
     it('should create user with valid data', async () => {
       // Arrange
       const userData = { name: 'John', email: 'john@example.com' };
-      
+
       // Act
       const user = await service.createUser(userData);
-      
+
       // Assert
       expect(user).toBeDefined();
       expect(user.name).toBe('John');
     });
-    
+
     it('should throw error with invalid email', async () => {
       // Arrange
       const userData = { name: 'John', email: 'invalid' };
-      
+
       // Act & Assert
-      await expect(service.createUser(userData))
-        .rejects.toThrow(ValidationError);
+      await expect(service.createUser(userData)).rejects.toThrow(
+        ValidationError
+      );
     });
   });
 });
@@ -497,6 +500,7 @@ footer
 ```
 
 **Types**:
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation
@@ -506,6 +510,7 @@ footer
 - `chore`: Maintenance
 
 **Examples**:
+
 ```
 feat(auth): add OAuth2 authentication
 fix(api): handle null response in user endpoint
@@ -529,7 +534,7 @@ chore/update-dependencies
 
 Each module should have a README:
 
-```markdown
+````markdown
 # Module Name
 
 Brief description.
@@ -545,6 +550,7 @@ import { ModuleName } from './module-name';
 
 const instance = new ModuleName();
 ```
+````
 
 ## API
 
@@ -555,7 +561,8 @@ Description.
 #### Methods
 
 - `method(param: Type): ReturnType` - Description
-```
+
+````
 
 ### Code Documentation
 
@@ -569,7 +576,7 @@ export function publicFunction() {}
 // Internal functions may have brief comments
 // Internal helper to validate email format
 function validateEmail(email: string): boolean {}
-```
+````
 
 ## Performance Conventions
 
@@ -583,14 +590,12 @@ const result = useMemo(() => expensive(), [deps]);
 // Use early returns
 function process(data: Data | null): void {
   if (!data) return; // Early return
-  
+
   // Process data
 }
 
 // Batch operations
-const results = await Promise.all(
-  items.map(item => process(item))
-);
+const results = await Promise.all(items.map((item) => process(item)));
 ```
 
 ## Security Conventions
@@ -606,7 +611,7 @@ function createUser(input: unknown): User {
     name: z.string().min(1),
     email: z.string().email(),
   });
-  
+
   return schema.parse(input);
 }
 
@@ -624,7 +629,8 @@ const safe = escape(userInput);
 - **[Tech Stack](../tech-stack/)**: Technologies used
 - **[Toolchain](../toolchain/)**: Development tools
 - **[Contributing](../../contributing/how-to-contribute/)**: How to contribute
-- **[Agent Guidelines](https://github.com/IAmJonoBo/Template/blob/main/.github/agents/AGENT_GUIDELINES.md)**: AI agent instructions
+- **[Agent Guidelines](https://github.com/IAmJonoBo/Template/blob/main/.github/agents/AGENT_GUIDELINES.md)**:
+  AI agent instructions
 
 ---
 

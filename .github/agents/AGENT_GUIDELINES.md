@@ -1,12 +1,15 @@
 # AI Agent Instructions for Template Repository
 
-This document provides comprehensive guidelines for AI agents working on this repository. Following these instructions ensures consistency, quality, and adherence to project standards.
+This document provides comprehensive guidelines for AI agents working on this
+repository. Following these instructions ensures consistency, quality, and
+adherence to project standards.
 
 ## Core Principles
 
 ### 1. Code Quality Standards
 
 **Always maintain highest quality:**
+
 - Write clean, readable, maintainable code
 - Follow SOLID principles
 - Apply DRY (Don't Repeat Yourself)
@@ -17,6 +20,7 @@ This document provides comprehensive guidelines for AI agents working on this re
 ### 2. Testing Requirements
 
 **Test-Driven Development:**
+
 - Write tests before or alongside code changes
 - Maintain minimum 80% code coverage
 - Test happy paths and edge cases
@@ -26,12 +30,14 @@ This document provides comprehensive guidelines for AI agents working on this re
 ### 3. Documentation Standards
 
 **Comprehensive Documentation:**
+
 - Update docs when changing functionality
 - Follow Diataxis methodology:
   - **Tutorials**: `docs/src/content/docs/tutorials/` - Learning-oriented
   - **How-To**: `docs/src/content/docs/how-to/` - Task-oriented
   - **Reference**: `docs/src/content/docs/reference/` - Information-oriented
-  - **Explanation**: `docs/src/content/docs/explanation/` - Understanding-oriented
+  - **Explanation**: `docs/src/content/docs/explanation/` -
+    Understanding-oriented
 - Create ADRs for architectural decisions
 - Keep README.md up-to-date
 
@@ -78,7 +84,7 @@ type Status = 'active' | 'inactive' | 'pending';
 enum Role {
   Admin = 'ADMIN',
   User = 'USER',
-  Guest = 'GUEST'
+  Guest = 'GUEST',
 }
 ```
 
@@ -89,7 +95,7 @@ enum Role {
 const config = { timeout: 5000 };
 
 // Use arrow functions for callbacks
-items.map(item => item.id);
+items.map((item) => item.id);
 
 // Use template literals
 const message = `Hello, ${name}!`;
@@ -192,6 +198,7 @@ Before creating a PR, ensure:
 ### PR Description Template
 
 Use the PR template provided. Include:
+
 - Clear description of changes
 - Type of change (bug, feature, etc.)
 - Related issues
@@ -209,41 +216,51 @@ When making significant architectural decisions:
 # ADR-XXXX: [Title]
 
 ## Status
+
 [Proposed | Accepted | Deprecated | Superseded by ADR-YYYY]
 
 ## Context
+
 [Describe the issue requiring a decision]
 
 ## Decision Drivers
+
 - [Driver 1]
 - [Driver 2]
 - [Driver 3]
 
 ## Considered Options
+
 1. [Option 1]
 2. [Option 2]
 3. [Option 3]
 
 ## Decision
+
 [Chosen option and rationale]
 
 ## Consequences
 
 ### Positive
+
 - [Positive consequence 1]
 - [Positive consequence 2]
 
 ### Negative
+
 - [Negative consequence 1]
 - [Negative consequence 2]
 
 ### Neutral
+
 - [Neutral consequence 1]
 
 ## Implementation
+
 [Implementation details if relevant]
 
 ## References
+
 - [Link 1]
 - [Link 2]
 ```
@@ -251,6 +268,7 @@ When making significant architectural decisions:
 ### When to Create an ADR
 
 Create an ADR when:
+
 - Choosing between architectural patterns
 - Selecting major dependencies/frameworks
 - Making breaking changes
@@ -314,17 +332,20 @@ try {
 } catch (error) {
   // Log error with context
   logger.error('Failed to perform operation', { error, context });
-  
+
   // Transform to application error
   throw new ApplicationError('Operation failed', {
     cause: error,
-    code: 'OPERATION_FAILED'
+    code: 'OPERATION_FAILED',
   });
 }
 
 // Use custom error classes
 class ApplicationError extends Error {
-  constructor(message: string, public details?: any) {
+  constructor(
+    message: string,
+    public details?: any
+  ) {
     super(message);
     this.name = 'ApplicationError';
   }
@@ -368,9 +389,9 @@ const apiKey = process.env.API_KEY;
 function createUser(input: unknown) {
   const schema = z.object({
     email: z.string().email(),
-    name: z.string().min(1).max(100)
+    name: z.string().min(1).max(100),
   });
-  
+
   const validated = schema.parse(input);
   // Use validated data
 }
@@ -405,13 +426,11 @@ const memoized = useMemo(() => expensiveOperation(), [deps]);
 // Use pagination for large datasets
 const users = await db.users.findMany({
   skip: page * pageSize,
-  take: pageSize
+  take: pageSize,
 });
 
 // Batch operations
-const results = await Promise.all(
-  items.map(item => processItem(item))
-);
+const results = await Promise.all(items.map((item) => processItem(item)));
 
 // Use streaming for large files
 const stream = fs.createReadStream(file);
@@ -428,33 +447,34 @@ describe('UserService', () => {
   beforeEach(() => {
     // Initialize test data
   });
-  
+
   // Teardown
   afterEach(() => {
     // Cleanup
   });
-  
+
   describe('createUser', () => {
     it('should create user with valid data', async () => {
       // Arrange
       const userData = { name: 'John', email: 'john@example.com' };
-      
+
       // Act
       const user = await userService.createUser(userData);
-      
+
       // Assert
       expect(user).toBeDefined();
       expect(user.name).toBe('John');
       expect(user.email).toBe('john@example.com');
     });
-    
+
     it('should throw error with invalid email', async () => {
       // Arrange
       const userData = { name: 'John', email: 'invalid' };
-      
+
       // Act & Assert
-      await expect(userService.createUser(userData))
-        .rejects.toThrow('Invalid email');
+      await expect(userService.createUser(userData)).rejects.toThrow(
+        'Invalid email'
+      );
     });
   });
 });
@@ -489,12 +509,14 @@ describe('UserService', () => {
 ### Code Review
 
 **As a Reviewer:**
+
 - Be constructive and respectful
 - Focus on code, not the person
 - Explain reasoning
 - Approve only when quality standards met
 
 **As a Reviewee:**
+
 - Respond to all comments
 - Be open to feedback
 - Make requested changes
@@ -503,12 +525,14 @@ describe('UserService', () => {
 ## Workflow Process
 
 ### 1. Planning
+
 - Review issue/requirements
 - Break down into tasks
 - Identify dependencies
 - Create implementation plan
 
 ### 2. Implementation
+
 - Create feature branch
 - Write tests (TDD)
 - Implement feature
@@ -516,6 +540,7 @@ describe('UserService', () => {
 - Update changelog
 
 ### 3. Quality Assurance
+
 - Run linter
 - Run tests
 - Run type checker
@@ -523,12 +548,14 @@ describe('UserService', () => {
 - Manual testing
 
 ### 4. Documentation
+
 - Update relevant docs
 - Create/update ADRs
 - Update README if needed
 - Add code comments
 
 ### 5. Pull Request
+
 - Create PR with template
 - Add reviewers
 - Respond to feedback
@@ -536,6 +563,7 @@ describe('UserService', () => {
 - Merge when approved
 
 ### 6. Post-Merge
+
 - Verify deployment
 - Monitor for issues
 - Update related issues
@@ -567,8 +595,8 @@ const config = {
   port: parseInt(process.env.PORT || '3000'),
   database: {
     host: process.env.DB_HOST || 'localhost',
-    port: parseInt(process.env.DB_PORT || '5432')
-  }
+    port: parseInt(process.env.DB_PORT || '5432'),
+  },
 };
 
 // Validate configuration
@@ -576,8 +604,8 @@ const configSchema = z.object({
   port: z.number().min(1).max(65535),
   database: z.object({
     host: z.string(),
-    port: z.number()
-  })
+    port: z.number(),
+  }),
 });
 
 const validatedConfig = configSchema.parse(config);
@@ -590,14 +618,14 @@ const validatedConfig = configSchema.parse(config);
 logger.info('User created', {
   userId: user.id,
   email: user.email,
-  timestamp: new Date().toISOString()
+  timestamp: new Date().toISOString(),
 });
 
 logger.error('Failed to process payment', {
   error: error.message,
   userId: user.id,
   amount: payment.amount,
-  timestamp: new Date().toISOString()
+  timestamp: new Date().toISOString(),
 });
 ```
 
@@ -612,6 +640,7 @@ logger.error('Failed to process payment', {
 ## Questions?
 
 If you have questions about these guidelines:
+
 - Check the [documentation](../../docs)
 - Ask in [discussions](https://github.com/IAmJonoBo/Template/discussions)
 - Contact maintainers

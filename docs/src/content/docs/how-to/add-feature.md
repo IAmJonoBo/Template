@@ -5,7 +5,8 @@ description: Step-by-step guide for adding new features to the repository
 
 # How to Add a New Feature
 
-This guide shows you how to add a new feature to the Template repository following best practices.
+This guide shows you how to add a new feature to the Template repository
+following best practices.
 
 ## Planning Phase
 
@@ -31,6 +32,7 @@ git grep -i "similar-feature"
 ### 3. Plan Your Implementation
 
 Consider:
+
 - **Scope**: What exactly needs to be done?
 - **Impact**: What will change?
 - **Testing**: How will you test it?
@@ -91,13 +93,14 @@ describe('Calculator', () => {
 ```
 
 Run tests (they should fail):
+
 ```bash
 npm test
 ```
 
 ### 3. Implement the Feature
 
-```typescript
+````typescript
 // src/features/calculator.ts
 
 /**
@@ -106,11 +109,11 @@ npm test
 export class Calculator {
   /**
    * Adds two numbers together
-   * 
+   *
    * @param a - First number
    * @param b - Second number
    * @returns The sum of a and b
-   * 
+   *
    * @example
    * ```typescript
    * const calc = new Calculator();
@@ -123,11 +126,11 @@ export class Calculator {
 
   /**
    * Subtracts b from a
-   * 
+   *
    * @param a - Number to subtract from
    * @param b - Number to subtract
    * @returns The difference of a and b
-   * 
+   *
    * @example
    * ```typescript
    * const calc = new Calculator();
@@ -138,7 +141,7 @@ export class Calculator {
     return a - b;
   }
 }
-```
+````
 
 ### 4. Run Tests
 
@@ -161,11 +164,11 @@ import { Calculator } from '../../src/features/calculator';
 describe('Calculator Integration', () => {
   it('should perform complex calculations', () => {
     const calc = new Calculator();
-    
+
     // Complex operation: (5 + 3) - 2 = 6
     const sum = calc.add(5, 3);
     const result = calc.subtract(sum, 2);
-    
+
     expect(result).toBe(6);
   });
 });
@@ -216,7 +219,7 @@ Add to the main README if this is a major feature:
 
 Create `docs/src/content/docs/reference/calculator.md`:
 
-```markdown
+````markdown
 ---
 title: Calculator API
 description: Reference documentation for the Calculator class
@@ -231,6 +234,7 @@ The Calculator class provides basic arithmetic operations.
 ```typescript
 import { Calculator } from 'template-repository';
 ```
+````
 
 ## Usage
 
@@ -257,12 +261,14 @@ console.log(result); // 2
 Adds two numbers together.
 
 **Parameters:**
+
 - `a` - First number
 - `b` - Second number
 
 **Returns:** The sum of a and b
 
 **Example:**
+
 ```typescript
 calc.add(2, 3); // Returns: 5
 ```
@@ -272,16 +278,19 @@ calc.add(2, 3); // Returns: 5
 Subtracts b from a.
 
 **Parameters:**
+
 - `a` - Number to subtract from
 - `b` - Number to subtract
 
 **Returns:** The difference of a and b
 
 **Example:**
+
 ```typescript
 calc.subtract(5, 3); // Returns: 2
 ```
-```
+
+````
 
 ### 4. Add to Documentation Sidebar
 
@@ -298,7 +307,7 @@ sidebar: [
     ],
   },
 ]
-```
+````
 
 ## Version Control Phase
 
@@ -396,12 +405,16 @@ git push origin feature/calculator
 
 ```markdown
 ## Description
-Adds a Calculator class with basic arithmetic operations (addition and subtraction).
+
+Adds a Calculator class with basic arithmetic operations (addition and
+subtraction).
 
 ## Type of Change
+
 - [x] ✨ New feature (non-breaking change which adds functionality)
 
 ## Changes Made
+
 - Created Calculator class in src/features/calculator.ts
 - Added comprehensive unit tests
 - Added integration tests
@@ -409,16 +422,19 @@ Adds a Calculator class with basic arithmetic operations (addition and subtracti
 - Updated exports in index.ts
 
 ## Testing
+
 - [x] Unit tests added (100% coverage)
 - [x] Integration tests added
 - [x] All tests pass locally
 
 ## Documentation
+
 - [x] JSDoc comments added
 - [x] API reference documentation created
 - [x] README updated (if needed)
 
 ## Checklist
+
 - [x] Code follows style guidelines
 - [x] Self-reviewed
 - [x] Added tests
@@ -432,6 +448,7 @@ Adds a Calculator class with basic arithmetic operations (addition and subtracti
 ### 1. Respond to CI Checks
 
 Wait for automated checks to complete:
+
 - ✓ Linting
 - ✓ Type checking
 - ✓ Tests

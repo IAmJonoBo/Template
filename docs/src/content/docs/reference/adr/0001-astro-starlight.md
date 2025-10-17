@@ -13,13 +13,15 @@ description: ADR for choosing Astro Starlight as documentation framework
 
 ## Context
 
-The Template repository requires comprehensive, maintainable, and user-friendly documentation. We need a documentation framework that:
+The Template repository requires comprehensive, maintainable, and user-friendly
+documentation. We need a documentation framework that:
 
 ### Current Situation
 
 - Starting a new template repository
 - No existing documentation infrastructure
-- Need to support multiple documentation types (tutorials, guides, reference, explanations)
+- Need to support multiple documentation types (tutorials, guides, reference,
+  explanations)
 - Must be easy for contributors to maintain
 - Should follow modern documentation best practices
 
@@ -56,9 +58,11 @@ The Template repository requires comprehensive, maintainable, and user-friendly 
 
 ### Option 1: Astro Starlight
 
-**Description**: Documentation theme built on Astro, specifically designed for documentation sites.
+**Description**: Documentation theme built on Astro, specifically designed for
+documentation sites.
 
 **Pros**:
+
 - Purpose-built for documentation
 - Excellent developer experience
 - Outstanding performance (static site generation)
@@ -72,11 +76,13 @@ The Template repository requires comprehensive, maintainable, and user-friendly 
 - Accessibility built-in
 
 **Cons**:
+
 - Relatively newer than some alternatives
 - Smaller ecosystem compared to older tools
 - May need custom components for advanced features
 
 **Example**:
+
 ```javascript
 // astro.config.mjs
 export default defineConfig({
@@ -97,6 +103,7 @@ export default defineConfig({
 **Description**: Facebook's documentation framework, built on React.
 
 **Pros**:
+
 - Mature and battle-tested
 - Large community and ecosystem
 - Rich plugin ecosystem
@@ -105,6 +112,7 @@ export default defineConfig({
 - i18n support
 
 **Cons**:
+
 - React-specific (adds bundle size)
 - More complex setup
 - Slower build times
@@ -117,6 +125,7 @@ export default defineConfig({
 **Description**: Vue-powered static site generator, successor to VuePress.
 
 **Pros**:
+
 - Fast build times (Vite)
 - Good performance
 - Vue ecosystem
@@ -124,6 +133,7 @@ export default defineConfig({
 - Good developer experience
 
 **Cons**:
+
 - Vue-specific
 - Less documentation-focused features
 - Smaller community than Docusaurus
@@ -132,9 +142,11 @@ export default defineConfig({
 
 ### Option 4: MkDocs Material
 
-**Description**: Python-based documentation framework with Material Design theme.
+**Description**: Python-based documentation framework with Material Design
+theme.
 
 **Pros**:
+
 - Very popular in Python community
 - Excellent theme
 - Rich features
@@ -142,6 +154,7 @@ export default defineConfig({
 - Easy to use
 
 **Cons**:
+
 - Python-based (different ecosystem)
 - Not JavaScript-native
 - Less flexible for custom components
@@ -153,12 +166,14 @@ export default defineConfig({
 **Description**: Next.js-based documentation framework.
 
 **Pros**:
+
 - Built on Next.js
 - Good performance
 - React ecosystem
 - Modern design
 
 **Cons**:
+
 - Less documentation-focused
 - Requires more setup
 - Smaller community
@@ -166,16 +181,22 @@ export default defineConfig({
 
 ## Decision
 
-We have decided to go with **Option 1: Astro Starlight** for our documentation framework.
+We have decided to go with **Option 1: Astro Starlight** for our documentation
+framework.
 
 ### Rationale
 
-1. **Purpose-Built**: Starlight is specifically designed for documentation sites, with all the features we need built-in
-2. **Performance**: Astro's static site generation provides excellent performance and SEO
-3. **Developer Experience**: Markdown/MDX support with minimal configuration needed
-4. **User Experience**: Beautiful, accessible design out of the box with dark mode and responsive layout
+1. **Purpose-Built**: Starlight is specifically designed for documentation
+   sites, with all the features we need built-in
+2. **Performance**: Astro's static site generation provides excellent
+   performance and SEO
+3. **Developer Experience**: Markdown/MDX support with minimal configuration
+   needed
+4. **User Experience**: Beautiful, accessible design out of the box with dark
+   mode and responsive layout
 5. **Modern Stack**: Uses modern web technologies aligned with our tech stack
-6. **Diataxis Support**: Easy to structure documentation following Diataxis methodology
+6. **Diataxis Support**: Easy to structure documentation following Diataxis
+   methodology
 7. **Future-Proof**: Active development and growing community
 
 ## Consequences
@@ -204,9 +225,11 @@ We have decided to go with **Option 1: Astro Starlight** for our documentation f
 ### Risks
 
 - **Risk**: Astro/Starlight development slows down
-  - **Mitigation**: Astro has strong backing and active community. Can migrate to another framework if needed.
+  - **Mitigation**: Astro has strong backing and active community. Can migrate
+    to another framework if needed.
 - **Risk**: Missing features we need later
-  - **Mitigation**: Astro is highly extensible. Can build custom features or integrate other tools.
+  - **Mitigation**: Astro is highly extensible. Can build custom features or
+    integrate other tools.
 
 ## Implementation
 
@@ -265,15 +288,17 @@ N/A - This is the initial documentation setup.
 
 ## Notes
 
-Starlight provides the perfect balance of features, performance, and developer experience for our documentation needs. The built-in features align well with our requirements, and the modern stack fits with our overall technology choices.
+Starlight provides the perfect balance of features, performance, and developer
+experience for our documentation needs. The built-in features align well with
+our requirements, and the modern stack fits with our overall technology choices.
 
 ---
 
 ## Review History
 
-| Date | Reviewer | Action | Notes |
-|------|----------|--------|-------|
-| 2024-10-09 | Template Team | Created | Initial decision |
+| Date       | Reviewer      | Action   | Notes              |
+| ---------- | ------------- | -------- | ------------------ |
+| 2024-10-09 | Template Team | Created  | Initial decision   |
 | 2024-10-09 | Template Team | Approved | Decision finalized |
 
 ---
@@ -283,13 +308,16 @@ Starlight provides the perfect balance of features, performance, and developer e
 ### Alternative Approaches Considered
 
 We also briefly considered:
+
 - Custom documentation site (too much work)
 - GitHub Wiki (too limited)
 - README-only approach (insufficient for comprehensive docs)
 
 ### Discussion Summary
 
-The team agreed that documentation quality is critical for template adoption. Astro Starlight provides the best balance of ease-of-use for contributors and excellent user experience for readers.
+The team agreed that documentation quality is critical for template adoption.
+Astro Starlight provides the best balance of ease-of-use for contributors and
+excellent user experience for readers.
 
 ### Future Considerations
 

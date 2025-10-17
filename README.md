@@ -1,22 +1,30 @@
 # 🚀 Multipurpose Template Repository
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)]()
-[![Documentation](https://img.shields.io/badge/docs-Astro%20Starlight-blueviolet.svg)]()
+[![Code Quality](https://img.shields.io/badge/code%20quality-A+-brightgreen.svg)](https://github.com/IAmJonoBo/Template/actions?query=workflow%3A%22Lint+and+Test%22)
+[![Documentation](https://img.shields.io/badge/docs-Astro%20Starlight-blueviolet.svg)](./docs)
 [![Semantic Versioning](https://img.shields.io/badge/semver-2.0.0-blue.svg)](https://semver.org/)
 
-A production-ready, multipurpose template repository designed to jumpstart any software project with best practices, comprehensive documentation, and automated quality gates built-in.
+A production-ready, multipurpose template repository designed to jumpstart any
+software project with best practices, comprehensive documentation, and automated
+quality gates built-in.
 
 ## 🌟 Features
 
-- **📚 Comprehensive Documentation**: Astro Starlight-powered docs following Diataxis methodology
-- **🔒 Quality Gates**: Automated linting, testing, security scanning, and code quality checks
-- **🤖 GitHub Actions**: Pre-configured CI/CD workflows for testing, building, and deployment
-- **📋 Project Management**: Issue/PR templates, automated project boards, and labels
+- **📚 Comprehensive Documentation**: Astro Starlight-powered docs following
+  Diataxis methodology
+- **🔒 Quality Gates**: Automated linting, testing, security scanning, and code
+  quality checks
+- **🤖 GitHub Actions**: Pre-configured CI/CD workflows for testing, building,
+  and deployment
+- **📋 Project Management**: Issue/PR templates, automated project boards, and
+  labels
 - **🔄 Evergreen Dependencies**: Automated dependency updates with Dependabot
 - **📝 ADR Support**: Architecture Decision Records structure and templates
-- **🏗️ Tech Stack Documentation**: Clear documentation of technologies and tooling
-- **⚡ Development Experience**: Pre-commit hooks, EditorConfig, and development scripts
+- **🏗️ Tech Stack Documentation**: Clear documentation of technologies and
+  tooling
+- **⚡ Development Experience**: Pre-commit hooks, EditorConfig, and development
+  scripts
 - **🎯 Semantic Versioning**: Automated versioning and changelog generation
 - **👥 Contributor Guidelines**: Clear guidelines for contributors and agents
 
@@ -47,7 +55,8 @@ npm run dev
 
 ## 📖 Documentation
 
-Full documentation is available in the `/docs` directory and can be viewed locally:
+Full documentation is available in the `/docs` directory and can be viewed
+locally:
 
 ```bash
 cd docs
@@ -116,7 +125,8 @@ This repository enforces high code quality standards:
 
 Dependencies are automatically kept up-to-date using:
 
-- **Dependabot**: Automated dependency updates (daily security, weekly feature updates)
+- **Dependabot**: Automated dependency updates (daily security, weekly feature
+  updates)
 - **GitHub Actions**: Automated testing of dependency updates
 
 ## 🔄 Versioning & Releases
@@ -127,11 +137,14 @@ This project follows [Semantic Versioning](https://semver.org/):
 - **MINOR**: New features (backward compatible)
 - **PATCH**: Bug fixes (backward compatible)
 
-Versioning is automated using Changesets. See [CHANGELOG.md](./CHANGELOG.md) for release history.
+Versioning is automated using Changesets. See [CHANGELOG.md](./CHANGELOG.md) for
+release history.
 
 ## 🤝 Contributing
 
-We welcome contributions! Please read our [Contributing Guidelines](.github/CONTRIBUTING.md) and [Code of Conduct](.github/CODE_OF_CONDUCT.md) before getting started.
+We welcome contributions! Please read our
+[Contributing Guidelines](.github/CONTRIBUTING.md) and
+[Code of Conduct](.github/CODE_OF_CONDUCT.md) before getting started.
 
 ### Quick Contribution Guide
 
@@ -146,15 +159,21 @@ We welcome contributions! Please read our [Contributing Guidelines](.github/CONT
 
 ## 📋 Architecture & Design
 
-- **[Architecture Decision Records (ADRs)](./docs/src/content/docs/reference/adr/)**: Design decisions and rationale
-- **[Tech Stack](./docs/src/content/docs/reference/tech-stack.md)**: Technologies and frameworks
-- **[Toolchain](./docs/src/content/docs/reference/toolchain.md)**: Development tools and utilities
-- **[Architecture](./docs/src/content/docs/explanation/architecture.md)**: System architecture overview
-- **[Conventions](./docs/src/content/docs/reference/conventions.md)**: Coding standards and practices
+- **[Architecture Decision Records (ADRs)](./docs/src/content/docs/reference/adr/)**:
+  Design decisions and rationale
+- **[Tech Stack](./docs/src/content/docs/reference/tech-stack.md)**:
+  Technologies and frameworks
+- **[Toolchain](./docs/src/content/docs/reference/toolchain.md)**: Development
+  tools and utilities
+- **[Architecture](./docs/src/content/docs/explanation/architecture.md)**:
+  System architecture overview
+- **[Conventions](./docs/src/content/docs/reference/conventions.md)**: Coding
+  standards and practices
 
 ## 🤖 AI Agent Instructions
 
-This repository includes comprehensive instructions for AI agents in `.github/agents/`. These guidelines help agents:
+This repository includes comprehensive instructions for AI agents in
+`.github/agents/`. These guidelines help agents:
 
 - Maintain code quality standards
 - Follow project conventions
@@ -164,7 +183,8 @@ This repository includes comprehensive instructions for AI agents in `.github/ag
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
 
 ## 🙏 Acknowledgments
 
@@ -177,7 +197,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Documentation**: Check the [docs](./docs) directory
 - **Issues**: Submit an [issue](https://github.com/IAmJonoBo/Template/issues)
-- **Discussions**: Join [discussions](https://github.com/IAmJonoBo/Template/discussions)
+- **Discussions**: Join
+  [discussions](https://github.com/IAmJonoBo/Template/discussions)
 
 ---
 

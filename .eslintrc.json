@@ -18,10 +18,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "jest"
-  ],
+  "plugins": ["@typescript-eslint", "jest"],
   "rules": {
     // TypeScript-specific rules
     "@typescript-eslint/no-unused-vars": [
@@ -48,7 +45,7 @@
         "prefer": "type-imports"
       }
     ],
-    
+
     // General rules
     "no-console": [
       "warn",
@@ -64,7 +61,7 @@
     "no-implied-eval": "error",
     "no-return-await": "error",
     "require-await": "error",
-    
+
     // Jest rules
     "jest/expect-expect": "warn",
     "jest/no-disabled-tests": "warn",
@@ -86,11 +83,5 @@
       }
     }
   ],
-  "ignorePatterns": [
-    "node_modules",
-    "dist",
-    "coverage",
-    "*.config.js",
-    "*.config.mjs"
-  ]
+  "ignorePatterns": ["node_modules", "dist", "coverage", "*.config.js", "*.config.mjs"]
 }

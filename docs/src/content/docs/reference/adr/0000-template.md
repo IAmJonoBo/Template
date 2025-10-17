@@ -13,7 +13,8 @@ description: Template for Architecture Decision Records
 
 ## Context
 
-[Describe the issue or problem that requires a decision. Include relevant background information, constraints, and requirements.]
+[Describe the issue or problem that requires a decision. Include relevant
+background information, constraints, and requirements.]
 
 ### Current Situation
 
@@ -48,16 +49,19 @@ description: Template for Architecture Decision Records
 **Description**: [Brief description of this option]
 
 **Pros**:
+
 - [Advantage 1]
 - [Advantage 2]
 - [Advantage 3]
 
 **Cons**:
+
 - [Disadvantage 1]
 - [Disadvantage 2]
 - [Disadvantage 3]
 
 **Example**:
+
 ```typescript
 // Code example if relevant
 ```
@@ -67,16 +71,19 @@ description: Template for Architecture Decision Records
 **Description**: [Brief description of this option]
 
 **Pros**:
+
 - [Advantage 1]
 - [Advantage 2]
 - [Advantage 3]
 
 **Cons**:
+
 - [Disadvantage 1]
 - [Disadvantage 2]
 - [Disadvantage 3]
 
 **Example**:
+
 ```typescript
 // Code example if relevant
 ```
@@ -86,10 +93,12 @@ description: Template for Architecture Decision Records
 **Description**: [Brief description of this option]
 
 **Pros**:
+
 - [Advantage 1]
 - [Advantage 2]
 
 **Cons**:
+
 - [Disadvantage 1]
 - [Disadvantage 2]
 
@@ -188,11 +197,11 @@ We have decided to go with **Option X: [Name]** because [explain reasoning].
 
 ## Review History
 
-| Date | Reviewer | Action | Notes |
-|------|----------|--------|-------|
-| YYYY-MM-DD | Name | Created | Initial draft |
-| YYYY-MM-DD | Name | Reviewed | Comments added |
-| YYYY-MM-DD | Name | Approved | Decision finalized |
+| Date       | Reviewer | Action   | Notes              |
+| ---------- | -------- | -------- | ------------------ |
+| YYYY-MM-DD | Name     | Created  | Initial draft      |
+| YYYY-MM-DD | Name     | Reviewed | Comments added     |
+| YYYY-MM-DD | Name     | Approved | Decision finalized |
 
 ---
 

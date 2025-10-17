@@ -5,13 +5,16 @@ description: System architecture overview and design principles
 
 # Architecture
 
-This document provides an overview of the Template repository architecture, design principles, and structural patterns.
+This document provides an overview of the Template repository architecture,
+design principles, and structural patterns.
 
 ## Architecture Overview
 
-The Template repository follows a **modular, layered architecture** that promotes:
+The Template repository follows a **modular, layered architecture** that
+promotes:
 
-- **Separation of Concerns**: Clear boundaries between different parts of the system
+- **Separation of Concerns**: Clear boundaries between different parts of the
+  system
 - **Maintainability**: Easy to understand, modify, and extend
 - **Testability**: Components are independently testable
 - **Scalability**: Can grow with project needs
@@ -117,23 +120,22 @@ Template Repository
 **Principle**: Break down the system into independent, reusable modules.
 
 **Benefits**:
+
 - Easier to understand and maintain
 - Promotes code reuse
 - Enables parallel development
 - Simplifies testing
 
 **Implementation**:
+
 ```typescript
 // Each module has clear boundaries
-src/
-  user/
-    user.service.ts
-    user.repository.ts
-    user.types.ts
-  auth/
-    auth.service.ts
-    auth.middleware.ts
-    auth.types.ts
+src / user / user.service.ts;
+user.repository.ts;
+user.types.ts;
+auth / auth.service.ts;
+auth.middleware.ts;
+auth.types.ts;
 ```
 
 ### 2. Separation of Concerns
@@ -141,6 +143,7 @@ src/
 **Principle**: Different concerns should be handled by different components.
 
 **Layers**:
+
 - **Presentation**: User interface and API endpoints
 - **Business Logic**: Core functionality and rules
 - **Data Access**: Database and external services
@@ -151,6 +154,7 @@ src/
 **Principle**: Each component should have one reason to change.
 
 **Example**:
+
 ```typescript
 // ❌ Bad: Multiple responsibilities
 class UserService {
@@ -183,11 +187,13 @@ class Logger {
 **Principle**: Dependencies should be injected, not hard-coded.
 
 **Benefits**:
+
 - Easier testing with mocks
 - Loose coupling
 - Flexible configuration
 
 **Example**:
+
 ```typescript
 // ✅ Good: Dependencies injected
 class UserService {
@@ -198,10 +204,7 @@ class UserService {
 }
 
 // Easy to test with mocks
-const service = new UserService(
-  mockRepository,
-  mockEmailService
-);
+const service = new UserService(mockRepository, mockEmailService);
 ```
 
 ### 5. Don't Repeat Yourself (DRY)
@@ -209,6 +212,7 @@ const service = new UserService(
 **Principle**: Avoid code duplication.
 
 **Implementation**:
+
 - Extract common logic to utilities
 - Use composition over inheritance
 - Create reusable components
@@ -218,6 +222,7 @@ const service = new UserService(
 **Principle**: Simplicity should be a key goal.
 
 **Guidelines**:
+
 - Write clear, readable code
 - Avoid over-engineering
 - Use straightforward solutions
@@ -241,7 +246,7 @@ class UserRepository implements Repository<User> {
   async findById(id: string): Promise<User | null> {
     // Database access logic
   }
-  
+
   async save(user: User): Promise<User> {
     // Save logic
   }
@@ -255,14 +260,14 @@ Encapsulates business logic:
 ```typescript
 class UserService {
   constructor(private repository: UserRepository) {}
-  
+
   async createUser(data: CreateUserDto): Promise<User> {
     // Validation
     this.validateUserData(data);
-    
+
     // Business logic
     const user = this.transformToUser(data);
-    
+
     // Persistence
     return this.repository.save(user);
   }
@@ -418,7 +423,7 @@ function createUser(input: unknown): User {
     email: z.string().email(),
     password: z.string().min(8),
   });
-  
+
   return schema.parse(input);
 }
 
@@ -469,13 +474,13 @@ async function getUser(id: string): Promise<User> {
   if (cache.has(id)) {
     return cache.get(id)!;
   }
-  
+
   // Fetch from database
   const user = await repository.findById(id);
-  
+
   // Update cache
   cache.set(id, user);
-  
+
   return user;
 }
 
@@ -489,9 +494,7 @@ async function getUsers(page: number, pageSize: number): Promise<User[]> {
 
 // Batch operations
 async function createUsers(usersData: CreateUserDto[]): Promise<User[]> {
-  return Promise.all(
-    usersData.map(data => createUser(data))
-  );
+  return Promise.all(usersData.map((data) => createUser(data)));
 }
 ```
 

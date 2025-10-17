@@ -60,9 +60,7 @@ export default defineConfig({
           ],
         },
       ],
-      customCss: [
-        './src/styles/custom.css',
-      ],
+      customCss: ['./src/styles/custom.css'],
       components: {
         // Override default components if needed
       },

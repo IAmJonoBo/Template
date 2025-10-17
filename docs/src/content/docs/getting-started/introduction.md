@@ -5,11 +5,15 @@ description: Welcome to the Template repository documentation
 
 # Introduction
 
-Welcome to the comprehensive documentation for the **Template** repository - a multipurpose, production-ready template designed to jumpstart any software project with industry best practices built-in.
+Welcome to the comprehensive documentation for the **Template** repository - a
+multipurpose, production-ready template designed to jumpstart any software
+project with industry best practices built-in.
 
 ## What is Template?
 
-Template is a carefully crafted repository template that provides a solid foundation for building modern software applications. It comes pre-configured with:
+Template is a carefully crafted repository template that provides a solid
+foundation for building modern software applications. It comes pre-configured
+with:
 
 - 📚 **Documentation Framework**: Astro Starlight with Diataxis methodology
 - 🔒 **Quality Gates**: Automated testing, linting, and security scanning
@@ -21,11 +25,13 @@ Template is a carefully crafted repository template that provides a solid founda
 
 ## Why Use Template?
 
-Starting a new project often requires setting up the same infrastructure and tooling repeatedly. Template eliminates this repetitive work by providing:
+Starting a new project often requires setting up the same infrastructure and
+tooling repeatedly. Template eliminates this repetitive work by providing:
 
 ### 🎯 Production-Ready Standards
 
 Every component follows industry best practices:
+
 - Code quality enforcement
 - Comprehensive testing strategies
 - Security-first approach
@@ -35,6 +41,7 @@ Every component follows industry best practices:
 ### 🚀 Quick Start
 
 Get your project running in minutes, not days:
+
 1. Use this template
 2. Install dependencies
 3. Start developing
@@ -42,6 +49,7 @@ Get your project running in minutes, not days:
 ### 🔄 Evergreen Maintenance
 
 Stay up-to-date automatically:
+
 - Automated dependency updates
 - Security scanning
 - Best practice updates
@@ -50,6 +58,7 @@ Stay up-to-date automatically:
 ### 📖 Comprehensive Documentation
 
 Built on the [Diataxis](https://diataxis.fr/) framework:
+
 - **Tutorials**: Learn step-by-step
 - **How-To Guides**: Solve specific problems
 - **Reference**: Look up details
@@ -133,7 +142,9 @@ We welcome contributions! See our:
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/IAmJonoBo/Template/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License. See the
+[LICENSE](https://github.com/IAmJonoBo/Template/blob/main/LICENSE) file for
+details.
 
 ---
 

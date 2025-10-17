@@ -10,7 +10,8 @@ We release patches for security vulnerabilities for the following versions:
 
 ## Reporting a Vulnerability
 
-We take security vulnerabilities seriously. If you discover a security vulnerability, please report it responsibly.
+We take security vulnerabilities seriously. If you discover a security
+vulnerability, please report it responsibly.
 
 ### How to Report
 
@@ -19,7 +20,8 @@ We take security vulnerabilities seriously. If you discover a security vulnerabi
 Instead, please report them through one of these methods:
 
 1. **GitHub Security Advisories** (Preferred)
-   - Go to the [Security tab](https://github.com/IAmJonoBo/Template/security/advisories)
+   - Go to the
+     [Security tab](https://github.com/IAmJonoBo/Template/security/advisories)
    - Click "Report a vulnerability"
    - Fill out the form with details
 
@@ -39,7 +41,8 @@ Please include the following information:
 - **References**: Any relevant links or references
 
 Example report:
-```
+
+```text
 Title: SQL Injection in User Query
 
 Description:
@@ -132,6 +135,7 @@ We publish security updates through:
 3. **CHANGELOG.md**
 
 Subscribe to security advisories:
+
 - Watch the repository
 - Enable security alerts
 - Follow releases
@@ -140,9 +144,9 @@ Subscribe to security advisories:
 
 We maintain a list of known vulnerabilities and their fixes:
 
-| CVE | Severity | Affected Versions | Fixed Version | Description |
-|-----|----------|-------------------|---------------|-------------|
-| - | - | - | - | No known vulnerabilities |
+| CVE | Severity | Affected Versions | Fixed Version | Description              |
+| --- | -------- | ----------------- | ------------- | ------------------------ |
+| -   | -        | -                 | -             | No known vulnerabilities |
 
 ## Disclosure Policy
 
@@ -153,7 +157,8 @@ We maintain a list of known vulnerabilities and their fixes:
 
 ## Security Hall of Fame
 
-We recognize and thank security researchers who responsibly disclose vulnerabilities:
+We recognize and thank security researchers who responsibly disclose
+vulnerabilities:
 
 <!-- List of security researchers will be added here -->
 

@@ -5,11 +5,14 @@ description: Semantic versioning and release management strategy
 
 # Versioning Strategy
 
-This document outlines the versioning and release management strategy for the Template repository.
+This document outlines the versioning and release management strategy for the
+Template repository.
 
 ## Overview
 
-We follow **[Semantic Versioning 2.0.0](https://semver.org/)** (SemVer) with automated changelog generation using **[Changesets](https://github.com/changesets/changesets)**.
+We follow **[Semantic Versioning 2.0.0](https://semver.org/)** (SemVer) with
+automated changelog generation using
+**[Changesets](https://github.com/changesets/changesets)**.
 
 ## Semantic Versioning
 
@@ -33,6 +36,7 @@ Examples:
 Increment when making **incompatible API changes**.
 
 **Examples**:
+
 - Removing or renaming public APIs
 - Changing function signatures
 - Removing features
@@ -52,6 +56,7 @@ function getUser(id: string, options: GetUserOptions): Promise<User> {}
 Increment when adding **backward-compatible functionality**.
 
 **Examples**:
+
 - Adding new features
 - Adding new optional parameters
 - Deprecating features (with backward compatibility)
@@ -76,6 +81,7 @@ class UserService {
 Increment when making **backward-compatible bug fixes**.
 
 **Examples**:
+
 - Bug fixes
 - Security patches
 - Documentation fixes
@@ -102,11 +108,13 @@ Use pre-release identifiers for versions not ready for production.
 **Format**: `MAJOR.MINOR.PATCH-IDENTIFIER.NUMBER`
 
 **Identifiers**:
+
 - `alpha`: Early development, unstable
 - `beta`: Feature complete, testing phase
 - `rc`: Release candidate, final testing
 
 **Examples**:
+
 ```
 1.0.0-alpha.1   - First alpha
 1.0.0-alpha.2   - Second alpha
@@ -120,7 +128,8 @@ Use pre-release identifiers for versions not ready for production.
 
 ### What is a Changeset?
 
-A changeset is a file that describes changes and indicates the version bump type.
+A changeset is a file that describes changes and indicates the version bump
+type.
 
 ### Creating a Changeset
 
@@ -135,6 +144,7 @@ npx changeset add
 ```
 
 You'll be prompted for:
+
 1. Which packages changed (if monorepo)
 2. Version bump type (major, minor, patch)
 3. Summary of changes
@@ -164,7 +174,7 @@ This creates a file in `.changeset/` directory:
 
 ```markdown
 ---
-"template": minor
+'template': minor
 ---
 
 Add user authentication with OAuth2 support
@@ -176,12 +186,14 @@ Add user authentication with OAuth2 support
 
 ```markdown
 ✅ Good summaries:
+
 - Add OAuth2 authentication support
 - Fix null pointer error in user service
 - Update documentation for API endpoints
 - Improve performance of database queries
 
 ❌ Poor summaries:
+
 - Updates
 - Bug fix
 - Changes
@@ -371,10 +383,10 @@ For important context, manually add to changelog:
 ### Minor Changes
 
 - Add OAuth2 authentication support
-  
-  This release adds support for OAuth2 authentication with
-  Google, GitHub, and Microsoft providers.
-  
+
+  This release adds support for OAuth2 authentication with Google, GitHub, and
+  Microsoft providers.
+
   **Migration Guide**: See [docs/migration/v1.2.0.md]
 
 ### Patch Changes
@@ -387,6 +399,7 @@ For important context, manually add to changelog:
 ### Announcing Deprecation
 
 1. Mark as deprecated in code:
+
 ```typescript
 /**
  * @deprecated Use getUserById instead
@@ -415,11 +428,11 @@ v2.0.0 - Remove feature (breaking change)
 
 ### Support Levels
 
-| Version | Support Level | Updates |
-|---------|--------------|---------|
-| Latest major | Full support | Features, fixes, security |
-| Previous major | Maintenance | Critical fixes, security |
-| Older versions | No support | None |
+| Version        | Support Level | Updates                   |
+| -------------- | ------------- | ------------------------- |
+| Latest major   | Full support  | Features, fixes, security |
+| Previous major | Maintenance   | Critical fixes, security  |
+| Older versions | No support    | None                      |
 
 ### Example Support Timeline
 
@@ -444,7 +457,7 @@ v1.x.x (Old)
 
 For major version bumps, create a migration guide:
 
-```markdown
+````markdown
 # Migration Guide: v1.x to v2.0
 
 ## Breaking Changes
@@ -452,16 +465,20 @@ For major version bumps, create a migration guide:
 ### 1. API Changes
 
 **Before (v1.x)**:
+
 ```typescript
-function getUser(id: string): User
+function getUser(id: string): User;
 ```
+````
 
 **After (v2.0)**:
+
 ```typescript
-function getUser(id: string, options?: GetUserOptions): Promise<User>
+function getUser(id: string, options?: GetUserOptions): Promise<User>;
 ```
 
 **Migration**:
+
 ```typescript
 // Update synchronous calls to async
 const user = await getUser(id);
@@ -476,10 +493,11 @@ try {
 
 ### 2. Configuration Changes
 
-**Before**: Config in `.config.js`
-**After**: Config in `.config.mjs` with ESM syntax
+**Before**: Config in `.config.js` **After**: Config in `.config.mjs` with ESM
+syntax
 
 **Migration**:
+
 ```bash
 # Rename file
 mv .config.js .config.mjs
@@ -493,22 +511,16 @@ mv .config.js .config.mjs
 
 ### Do's
 
-✅ Create changesets for every PR
-✅ Write clear, descriptive summaries
-✅ Follow SemVer strictly
-✅ Update documentation with changes
-✅ Create migration guides for breaking changes
-✅ Use pre-release versions for testing
-✅ Keep changelog up-to-date
+✅ Create changesets for every PR ✅ Write clear, descriptive summaries ✅
+Follow SemVer strictly ✅ Update documentation with changes ✅ Create migration
+guides for breaking changes ✅ Use pre-release versions for testing ✅ Keep
+changelog up-to-date
 
 ### Don'ts
 
-❌ Skip changesets for "small" changes
-❌ Make breaking changes in patch/minor versions
-❌ Release without testing
-❌ Break SemVer rules
-❌ Forget to update documentation
-❌ Remove features without deprecation period
+❌ Skip changesets for "small" changes ❌ Make breaking changes in patch/minor
+versions ❌ Release without testing ❌ Break SemVer rules ❌ Forget to update
+documentation ❌ Remove features without deprecation period
 
 ## Tools and Automation
 
@@ -547,7 +559,8 @@ jobs:
 
 ## Related Documentation
 
-- **[Contributing](../../contributing/how-to-contribute/)**: Contribution workflow
+- **[Contributing](../../contributing/how-to-contribute/)**: Contribution
+  workflow
 - **[Architecture](./architecture/)**: System architecture
 - **[ADRs](../reference/adr/)**: Architecture decisions
 

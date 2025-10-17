@@ -5,7 +5,8 @@ description: Learn how to contribute to the Template repository
 
 # How to Contribute
 
-Thank you for your interest in contributing! This guide will help you get started.
+Thank you for your interest in contributing! This guide will help you get
+started.
 
 ## Quick Links
 
@@ -21,15 +22,18 @@ Thank you for your interest in contributing! This guide will help you get starte
 Found a bug? Help us fix it!
 
 1. Check [existing issues](https://github.com/IAmJonoBo/Template/issues) first
-2. Create a new issue using the [Bug Report template](https://github.com/IAmJonoBo/Template/issues/new?template=bug_report.yml)
+2. Create a new issue using the
+   [Bug Report template](https://github.com/IAmJonoBo/Template/issues/new?template=bug_report.yml)
 3. Provide detailed information to help reproduce the issue
 
 ### 2. Suggest Features
 
 Have an idea? We'd love to hear it!
 
-1. Check [discussions](https://github.com/IAmJonoBo/Template/discussions) for similar ideas
-2. Create a new issue using the [Feature Request template](https://github.com/IAmJonoBo/Template/issues/new?template=feature_request.yml)
+1. Check [discussions](https://github.com/IAmJonoBo/Template/discussions) for
+   similar ideas
+2. Create a new issue using the
+   [Feature Request template](https://github.com/IAmJonoBo/Template/issues/new?template=feature_request.yml)
 3. Describe your idea and its benefits
 
 ### 3. Improve Documentation
@@ -37,7 +41,8 @@ Have an idea? We'd love to hear it!
 Documentation is crucial!
 
 1. Find areas that need improvement
-2. Create an issue using the [Documentation template](https://github.com/IAmJonoBo/Template/issues/new?template=documentation.yml)
+2. Create an issue using the
+   [Documentation template](https://github.com/IAmJonoBo/Template/issues/new?template=documentation.yml)
 3. Or directly submit a PR with improvements
 
 ### 4. Write Code
@@ -82,6 +87,7 @@ git checkout -b feature/your-feature-name
 ```
 
 Branch naming conventions:
+
 - `feature/` - New features
 - `fix/` - Bug fixes
 - `docs/` - Documentation changes
@@ -126,6 +132,7 @@ Follow [Conventional Commits](https://www.conventionalcommits.org/):
 ```
 
 Types:
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation
@@ -173,6 +180,7 @@ git push origin feature/your-feature-name
 ### Step 9: Merge
 
 Once approved:
+
 1. Maintainer will merge your PR
 2. Your changes will be in the next release
 3. Delete your feature branch
@@ -210,10 +218,10 @@ describe('Feature', () => {
   it('should do something correctly', () => {
     // Arrange
     const input = 'test';
-    
+
     // Act
     const result = myFunction(input);
-    
+
     // Assert
     expect(result).toBe('expected');
   });
@@ -281,7 +289,8 @@ Need help?
 
 ### Code of Conduct
 
-Please read and follow our [Code of Conduct](https://github.com/IAmJonoBo/Template/blob/main/.github/CODE_OF_CONDUCT.md).
+Please read and follow our
+[Code of Conduct](https://github.com/IAmJonoBo/Template/blob/main/.github/CODE_OF_CONDUCT.md).
 
 ## Recognition
 
@@ -297,6 +306,7 @@ We recognize contributors in:
 ### Good First Issues
 
 New to the project? Look for issues labeled:
+
 - `good first issue` - Great for beginners
 - `help wanted` - We need help
 - `documentation` - Docs improvements
@@ -312,6 +322,7 @@ New to the project? Look for issues labeled:
 ### Best Practices
 
 ✅ **Do**:
+
 - Read existing code
 - Ask questions
 - Keep PRs focused
@@ -320,6 +331,7 @@ New to the project? Look for issues labeled:
 - Be patient and respectful
 
 ❌ **Don't**:
+
 - Submit huge PRs
 - Ignore feedback
 - Break existing functionality
@@ -375,10 +387,12 @@ git push --force origin feature/your-feature
 
 Still have questions?
 
-- Read the [full Contributing Guidelines](https://github.com/IAmJonoBo/Template/blob/main/.github/CONTRIBUTING.md)
+- Read the
+  [full Contributing Guidelines](https://github.com/IAmJonoBo/Template/blob/main/.github/CONTRIBUTING.md)
 - Join [GitHub Discussions](https://github.com/IAmJonoBo/Template/discussions)
 - Contact maintainers
 
 ---
 
-**Thank you for contributing!** 🎉 Every contribution, no matter how small, makes a difference.
+**Thank you for contributing!** 🎉 Every contribution, no matter how small,
+makes a difference.
