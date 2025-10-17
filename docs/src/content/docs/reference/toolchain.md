@@ -3,8 +3,6 @@ title: Toolchain
 description: Development tools and utilities reference
 ---
 
-# Toolchain
-
 This document describes the development tools and utilities used in the Template
 repository.
 

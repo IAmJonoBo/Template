@@ -74,7 +74,8 @@ brew install git
 
 ### Windows
 
-Download and install from: https://git-scm.com/download/win
+Download and install from:
+[https://git-scm.com/download/win](https://git-scm.com/download/win)
 
 ### Linux
 
@@ -110,7 +111,8 @@ git config --list
 
 ### VS Code (Recommended)
 
-1. Download from: https://code.visualstudio.com/
+1. Download from:
+   [https://code.visualstudio.com/](https://code.visualstudio.com/)
 2. Install for your operating system
 3. Open VS Code
 
@@ -178,7 +180,8 @@ Create `.vscode/extensions.json`:
 
 ### Fork First (For Contributors)
 
-1. Go to https://github.com/IAmJonoBo/Template
+1. Go to
+   [https://github.com/IAmJonoBo/Template](https://github.com/IAmJonoBo/Template)
 2. Click **"Fork"** button
 3. Wait for your fork to be created
 
@@ -259,7 +262,7 @@ npm run verify
 
 Expected output:
 
-```
+```text
 ✓ Linting passed
 ✓ Type checking passed
 ✓ Tests passed
@@ -290,7 +293,7 @@ npm install
 npm run dev
 ```
 
-Visit http://localhost:4321
+Visit [http://localhost:4321](http://localhost:4321)
 
 ## 10. Set Up Additional Tools (Optional)
 
@@ -320,9 +323,11 @@ gh auth login
 If you plan to use Docker:
 
 1. Download Docker Desktop
-   - macOS: https://docs.docker.com/desktop/install/mac-install/
-   - Windows: https://docs.docker.com/desktop/install/windows-install/
-   - Linux: https://docs.docker.com/desktop/install/linux-install/
+   - macOS:
+     [https://docs.docker.com/desktop/install/mac-install/](https://docs.docker.com/desktop/install/mac-install/)
+   - Windows:
+     [https://docs.docker.com/desktop/install/windows-install/](https://docs.docker.com/desktop/install/windows-install/)
+   - Linux: <https://docs.docker.com/desktop/install/linux-install/>
 
 2. Verify installation:
 
@@ -395,6 +400,7 @@ chmod +x .husky/*
 - Use Git Bash or PowerShell
 - Consider using WSL2 for Linux compatibility
 - Enable long path support:
+
   ```powershell
   git config --system core.longpaths true
   ```
